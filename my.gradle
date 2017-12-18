@@ -7,5 +7,16 @@ task sayHello() {
     print("sayHello Hello World")
 }
 
-//gradle clean
-//gradle hello
+task hello << {
+    print("Hello World")
+}
+
+task showTasks {
+    println "class Name=" + tasks.class
+    println "size=" + tasks.size()
+}
+
+task showDescription << {
+    description = 'this is task showDescription'
+    println description
+}

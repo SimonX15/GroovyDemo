@@ -1,4 +1,20 @@
 ext {
-    kotlin_version = "1.1.51"
-    anko_version = '0.10.1'
+    android = [
+            compileSdkVersion: 26,
+//            buildToolsVersion: "23.0.2",
+            minSdkVersion    : 19,
+            targetSdkVersion : 26,
+    ]
+
+    def kotlin_version = '1.1.51'
+    def support_version = '25.3.1'
+
+    dependencies = [
+            kotlinPlugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",
+            appcompatV7 : "com.android.support:appcompat-v7:$support_version",
+            design      : "com.android.support:design:$support_version"
+    ]
 }
+
+//参考
+//https://github.com/hacket/gradle-config
